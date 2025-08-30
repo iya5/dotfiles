@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#prevents multiple instances of super+ESC
+
+pgrep wlogout
+res=$(echo $?)
+[[ $res -eq 1 ]] && wlogout

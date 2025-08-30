@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+        "modules-left": [
+            "hyprland/workspaces",
+            "hyprland/mode",  
+            "hyprland/window"
+        ],
+        "modules-center": [
+            "custom/combined-time-weather"
+        ],
+        "modules-right": [
+            "wireplumber", 
+            "network",
+            "memory", 
+            "cpu", 
+        ],
+
+        "hyprland/window": {
+            "max-length": 50
+        },
+
+        "hyprland/workspaces": {
+            "format": "{icon}",
+            "on-click": "activate",
+            "format-icons": {
+                "1": " ",
+                "2": " ",
+                "3": " ",
+                "4": " ",
+                "5": " ",
+                "urgent": " ",
+                "active": " ",
+                "default": " "
+                },
+            "sort-by-number": true,
+            "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+        }
+        },
+
+        "tray": {
+            "spacing": 10,
+            "tooltip": false
+        },
+
+        "custom/clock12": {
+            "exec": "~/.config/waybar/time.sh",
+            "interval": 60,
+            "tooltip": false
+        },
+
+        "memory": {
+            "interval": 30,
+            "format": "{used:0.1f}G/{total:0.1f}G  "
+        },
+        "cpu": {
+            "interval": 10,
+            "format": "{}%  ",
+            "max-length": 10
+        },
+
+         "network": {
+            "format-wifi" : "  up",
+            "format-ethernet": "󰈀  up",
+            "format-disconnected": "",
+            "tooltip-format-disconnected": "Not connected",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+            "tooltip-format-ethernet": "{ifname} 🖧   {bandwidthUpBits}  {bandwidthDownBits}"
+        },
+
+        "wireplumber": {
+            "format": "{volume}%  {icon}",
+            "format-bluetooth": "{volume}% {icon}",
+            "format-muted": "",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": [" ", " "]
+            },
+            "scroll-step": 1,
+            "on-click": "pwvucontrol"
+        },
+        "custom/combined-time-weather": {
+            "exec": "echo \"$(date \"+%a  %d  %b    %-I:%M %p\")\"",
+            "interval": 60
+        }
+}
