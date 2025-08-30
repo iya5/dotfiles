@@ -17,12 +17,14 @@ window {
 }
 
 button {
-    margin: 8px;
-    border-width: 2px;
+    font-family: "SF Pro Display";
+    font-size: 18px;
+    margin: 4px;
+    border-width: 1px;
     border-radius: 30;
-    border-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25%;
@@ -37,61 +39,67 @@ button:hover {
     /* 20% Overlay 2, 80% mantle
     background-color: rgb(48, 50, 66);
     outline-style: none; */
-    background-color: rgba(0, 0, 0, 0.7); /*#b9b1e2;*/
+    background-color: rgba(0, 0, 0, 0.8); /*#b9b1e2;*/
     outline-style: none;
     border-color: rgba(0, 0, 0, 0.2);
 }
 
 #logout {
     background-image: image(
-        url("icons/logout.png"),
-        url("/usr/local/share/wlogout/icons/logout.png")
+        url("icons/logout.svg"),
+        url("/usr/local/share/wlogout/icons/logout.svg")
     );
     animation: appear 300ms ease-out forwards;
     animation-delay: 0.1s;
+    background-size: 10%; 
 }
 
 #suspend {
     background-image: image(
-        url("icons/suspend.png"),
-        url("/usr/local/share/wlogout/icons/suspend.png")
+        url("icons/suspend.svg"),
+        url("/usr/local/share/wlogout/icons/suspend.svg")
     );
     animation: appear 300ms ease-out forwards;
     animation-delay: 0.2s;
+    background-size: 10%;
 }
 
 #hibernate {
     background-image: image(
-        url("icons/hibernate.png"),
-        url("/usr/local/share/wlogout/icons/hibernate.png")
+        url("icons/hibernate.svg"),
+        url("/usr/local/share/wlogout/icons/hibernate.svg")
     );
     animation: appear 300ms ease-out forwards;
     animation-delay: 0.3s;
+    background-size: 10%;
 }
 
 #shutdown {
     background-image: image(
-        url("icons/shutdown.png"),
-        url("/usr/local/share/wlogout/icons/shutdown.png")
+        url("icons/shutdown.svg"),
+        url("/usr/local/share/wlogout/icons/shutdown.svg")
     );
     animation: appear 300ms ease-out forwards;
     animation-delay: 0.4s;
+    background-size: 10%; 
 }
 
 #reboot {
     background-image: image(
-        url("icons/reboot.png"),
-        url("/usr/local/share/wlogout/icons/reboot.png")
+        url("icons/reboot.svg"),
+        url("/usr/local/share/wlogout/icons/reboot.svg")
     );
     animation: appear 300ms ease-out forwards;
     animation-delay: 0.5s;
+    background-size: 10%; 
 }
 
 #lock {
     background-image: image(
-        url("icons/lock.png"),
-        url("/usr/local/share/wlogout/icons/lock.png")
+        url("icons/lock.svg"),
+        url("/usr/local/share/wlogout/icons/lock.svg")
     );
     animation: appear 300ms ease-out forwards;
     animation-delay: 0s;
+    background-size: 10%; 
 }
