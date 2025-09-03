@@ -2,7 +2,6 @@
     "layer": "top",
         "modules-left": [
             "hyprland/workspaces",
-            "hyprland/mode",  
             "hyprland/window"
         ],
         "modules-center": [
@@ -68,7 +67,8 @@
             "format-disconnected": " ",
             "tooltip-format-disconnected": "Not connected",
             "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
-            "tooltip-format-ethernet": "{ifname} 🖧   {bandwidthUpBits}  {bandwidthDownBits}"
+            "tooltip-format-ethernet": "{ifname} 🖧   {bandwidthUpBits}  {bandwidthDownBits}",
+            "on-click": "nm-connection-editor"
         },
 
         "wireplumber": {
@@ -88,7 +88,7 @@
             "on-click": "pwvucontrol"
         },
         "custom/combined-time-date": {
-            "exec": "echo \"$(date \"+%a  %d  %b    %-I:%M %p\")\"",
+            "exec": "echo \"$(date \"+%a  %d  %B   %-I:%M %p\")\"",
             "interval": 60
         }
 }
