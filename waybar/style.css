@@ -34,6 +34,7 @@ window#waybar {
 #workspaces,
 #wireplumber,
 #network,
+#bluetooth,
 #memory,
 #cpu {
     background-image: linear-gradient(
@@ -88,6 +89,11 @@ window#waybar {
 }
 
 /* Right-side modules */
+#bluetooth {
+    font-size: 12pt;
+    padding: 2px 8px;
+    margin-left: 7px;
+}
 #wireplumber {
     padding: 2px 8px;  
     margin-left: 7px;  
@@ -102,6 +108,16 @@ window#waybar {
     margin-left: 7px;  
 }
 
+#bluetooth.connected {
+    background: white;
+    color: black;
+    border: 0.4px solid rgba(255, 255, 255, 0.8);
+}
+
+#bluetooth.disabled {
+    color: rgba(185, 185, 185, 0.6);
+}
+
 /* -----------------------------------------------------
  * Interactivity / States
  * ----------------------------------------------------- */
@@ -109,7 +125,8 @@ window#waybar {
 #memory:hover,
 #network:hover,
 #disk:hover, 
-#wireplumber:hover, 
+#wireplumber:hover,
+#bluetooth:hover,
 #cpu:hover,
 #cpu.critical {
     background: rgba(10, 10, 10, 0.10);
