@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# Flags:
+
+# r: region
+# s: screen
+#
+# c: clipboard
+# f: file
+# i: interactive
+
+# p: pixel
+
+if [[ $1 == rcf ]]; then
+    # Region → Clipboard + File
+    mkdir -p ~/Pictures/screenshots
+    filename=~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+
+    region=$(slurp -b '#000000b0' -c '#00000000') || exit 1
+    [[ -z "$region" ]] && exit 1
+
+    grim -g "$region" - | tee >(wl-copy) > "$filename"
+    notify-send 'Screenshot Taken & Copied' "$filename"
+
+elif [[ $1 == scf ]]; then
+    # Screen → Clipboard + File
+    mkdir -p ~/Pictures/screenshots
+    filename=~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+    grim - | tee >(wl-copy) > "$filename"
+    notify-send 'Screenshot Taken & Copied' "$filename"
+
+elif [[ $1 == ri ]]; then
+    region=$(slurp -b '#000000b0' -c '#00000000') || exit 1
+    [[ -z "$region" ]] && exit 1
+
+    grim -g "$region" - | swappy -f -
+
+elif [[ $1 == si ]]; then
+    grim - | swappy -f -
+
+elif [[ $1 == p ]]; then
+    color=$(hyprpicker -a)
+    wl-copy "$color"
+    notify-send 'Copied to Clipboard' "$color"
+fi
