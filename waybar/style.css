@@ -1,64 +1,117 @@
+/* -----------------------------------------------------
+ * Global Defaults
+ * ----------------------------------------------------- */
 * {
     font-family: "SF Pro Display";
     font-size: 11pt;  
     color: white;
-    padding: 1px 7px 1px 7px;
-    border-radius: 0.6rem;
+    padding: 1px 4px;
+    border-radius: 0.5rem;
     box-shadow: none;
     text-shadow: none;
-    transition-duration: 0s;
+    transition-duration: 0.2s; 
 }
 
+/* Reset Waybar window */
 window#waybar {
     all: unset;
 }
 
+/* -----------------------------------------------------
+ * Layout Containers
+ * ----------------------------------------------------- */
 .modules-left,
 .modules-center,
 .modules-right {
-    margin: 5px 10px 2px 0px;
+    margin: 8px 10px 0px 10px;
 }
 
+/* -----------------------------------------------------
+ * Liquid Glass Base Style
+ * ----------------------------------------------------- */
 #window,
-#memory,
-#disk,
-#network,
-#wireplumber,
 #custom-combined-time-date,
-#cpu,
+#workspaces,
+#wireplumber,
+#network,
+#memory,
+#cpu {
+    background-image: linear-gradient(
+        135deg,
+        rgba(205, 205, 205, 0.045),  /* top-left shine */
+        rgba(205, 205, 205, 0.02) 40%, 
+        rgba(205, 205, 205, 0.0125) 60%, 
+        rgba(205, 205, 205, 0.05) 100%
+    );
+    background-color: rgba(205, 205, 205, 0.02);
+    border: 0.4px solid rgba(235, 235, 235, 0.50); /* soft border */
+    border-radius: 0.6rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+/* -----------------------------------------------------
+ * Modules: Shared Styles
+ * ----------------------------------------------------- */
+
+/* Left-side modules */
+#window,
+#custom-combined-time-date {
+    margin-left: 7px;
+    padding: 1px 12px;
+}
+
 #workspaces {
     margin-left: 7px;
-    border: 1px rgba(255, 255, 255, 0.5) solid;
 }
 
-#workspaces {
-    padding: 0px;
-    margin: 0px;
+/* Workspace buttons */
+#workspaces button {
+    padding: 0px 5px 0px 1px;
+    border: none;
+    background: transparent; /* inherit liquid glass from parent */
 }
 
-#custom-combined-time-date {
-    background: transparent;
+/* Active workspace */
+#workspaces button.active {
+    color: white;
 }
 
+/* Inactive workspaces */
+#workspaces button {
+    color: #898989;
+}
+
+/* Workspace hover transparency */
+#workspaces button:hover {
+    background: rgba(10, 10, 10, 0.10); /* subtle glass hover */
+    color: white;
+}
+
+/* Right-side modules */
 #wireplumber {
-    background: transparent;
+    padding: 2px 8px;  
+    margin-left: 7px;  
 }
-
-#memory {
-    background: transparent;
+#network {
+    padding: 2px 16px 2px 8px;  
+    margin-left: 7px;  
 }
-
+#memory,
 #cpu {
-    background: transparent;
+    padding: 2px 11px 2px 8px;  
+    margin-left: 7px;  
 }
 
-/* Optional: Add hover effects for better interactivity */
+/* -----------------------------------------------------
+ * Interactivity / States
+ * ----------------------------------------------------- */
 #window:hover, 
-#memory:hover, 
+#memory:hover,
+#network:hover,
 #disk:hover, 
 #wireplumber:hover, 
 #cpu:hover,
-#workspaces:hover,
 #cpu.critical {
-    color: #898989;
+    background: rgba(10, 10, 10, 0.10);
+    color: white;
 }
