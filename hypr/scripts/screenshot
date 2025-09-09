@@ -43,3 +43,10 @@ elif [[ $1 == p ]]; then
     wl-copy "$color"
     notify-send 'Copied to Clipboard' "$color"
 fi
+
+# SAMPLE application on ur hyprland config
+# bind = $mainMod SHIFT, s, exec, "$HOME/.config/hypr/scripts/screenshot" rcf
+# bind = $mainMod, s, exec, "$HOME/.config/hypr/scripts/screenshot" scf
+# bind = $mainMod SHIFT, r, exec, "$HOME/.config/hypr/scripts/screenshot" ri
+# bind = $mainMod, r, exec, "$HOME/.config/hypr/scripts/screenshot" si
+# bind = $mainMod, p, exec, "$HOME/.config/hypr/scripts/screenshot" p
