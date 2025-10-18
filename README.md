@@ -27,4 +27,4 @@ list of main programs, applications, tools and themes that I use for my rice
 
 ## Showcase
 
-This is how my rice look like as of the moment. It's not done yet :<
+<img src="showcase/sh1.png" alt="showcase 1">
