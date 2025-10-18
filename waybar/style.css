@@ -44,10 +44,9 @@ window#waybar {
         rgba(205, 205, 205, 0.0125) 60%, 
         rgba(205, 205, 205, 0.05) 100%
     );
-    background-color: rgba(205, 205, 205, 0.02);
     border: 0.4px solid rgba(235, 235, 235, 0.50); /* soft border */
+    background-color: rgba(204, 205, 205, 0.02);
     border-radius: 0.6rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* subtle shadow */
 }
 
 /* -----------------------------------------------------
@@ -124,7 +123,6 @@ window#waybar {
 #window:hover, 
 #memory:hover,
 #network:hover,
-#disk:hover, 
 #wireplumber:hover,
 #bluetooth:hover,
 #cpu:hover,

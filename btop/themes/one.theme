@@ -1,0 +1,55 @@
+# Main background (transparent)
+theme[main_bg]=""
+
+# Main text color
+theme[main_fg]="#cdd0cb"
+
+# Title color for boxes
+theme[title]="#cdd0cb"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#5E6F8A"  
+
+# Background color of selected item in processes box
+theme[selected_bg]="#6A7FA0" 
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#cdd0cb"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#40"
+
+# Color of text appearing on top of graphs
+theme[graph_text]="#cdd0cb"
+
+# Background color of the percentage meters
+theme[meter_bg]="#40"
+
+# Misc colors for processes box
+theme[proc_misc]="#90A0B0"   
+
+# Cpu box outline color
+theme[cpu_box]="#90A0B0"
+
+# Memory/disks box outline color
+theme[mem_box]="#90A0B0"
+
+# Net up/down box outline color
+theme[net_box]="#90A0B0"
+
+# Processes box outline color
+theme[proc_box]="#90A0B0"
+
+# Box divider line and small boxes line color
+theme[div_line]="#90A0B0"
+
+# Temperature graph colors (green → teal/blue)
+theme[temp_start]="#5E82A0"
+theme[temp_mid]="#6E92B2"
+theme[temp_end]="#7EA2C4"
+
+# CPU graph colors (green → teal/blue)
+theme[cpu_start]="#5E82A0"
+theme[cpu_mid]="#6E92B2"
+theme[cpu_end]="#7EA2C4"
+
